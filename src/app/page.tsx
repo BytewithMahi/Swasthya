@@ -6,6 +6,7 @@ import Hero from '@/components/Hero';
 import Features from '@/components/Features';
 import TechLayer from '@/components/TechLayer';
 import Team from '@/components/Team';
+import Progress from '@/components/Progress';
 import Waitlist from '@/components/Waitlist';
 import Footer from '@/components/Footer';
 import LenisProvider from '@/components/LenisProvider';
@@ -18,6 +19,7 @@ const sectionColors: { [key: string]: string } = {
   solution: '#93C5FD',      // Vibrant digital blue
   architecture: '#C7D2FE',  // Rich indigo purple
   team: '#A7F3D0',          // Glowing emerald mint
+  progress: '#FEF08A',      // Bright neon yellow progress glow
   waitlist: '#FCA5A5',      // Bright popping rose/red
 };
 
@@ -63,7 +65,7 @@ export default function Home() {
 
     const observer = new IntersectionObserver(observerCallback, observerOptions);
 
-    const sectionIds = ['home', 'solution', 'architecture', 'team', 'waitlist'];
+    const sectionIds = ['home', 'solution', 'architecture', 'team', 'progress', 'waitlist'];
     sectionIds.forEach((id) => {
       const el = document.getElementById(id);
       if (el) observer.observe(el);
@@ -135,7 +137,10 @@ export default function Home() {
         {/* Section 4: Team */}
         <Team />
 
-        {/* Section 5: Waitlist */}
+        {/* Section 5: Progress */}
+        <Progress />
+
+        {/* Section 6: Waitlist */}
         <Waitlist />
 
       </main>
