@@ -9,6 +9,7 @@ const navItems = [
   { label: 'Solution', href: '#solution' },
   { label: 'Architecture', href: '#architecture' },
   { label: 'Team', href: '#team' },
+  { label: 'Progress', href: '#progress' },
   { label: 'Waitlist', href: '#waitlist' },
 ];
 
