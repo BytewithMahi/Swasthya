@@ -109,7 +109,7 @@ export default function Hero() {
             <br />
             <span className="text-txt-main font-extrabold">Smart Healthcare.</span>
             <br />
-            <span className="text-txt-main/80 font-medium">Better Tomorrow.</span>
+            <span className="text-txt-main/80 font-cursive text-5xl md:text-6xl block mt-1 tracking-normal font-normal">Better Tomorrow.</span>
           </motion.h1>
 
           {/* Description */}

@@ -7,28 +7,24 @@ const footerLinks = [
   {
     title: 'Platform',
     items: [
-      { label: 'Outbreak Forecasting', href: '#features' },
-      { label: 'Resource Allocator', href: '#features' },
-      { label: 'Blockchain EHR Integrity', href: '#features' },
-      { label: 'Command Center', href: '#dashboard-preview' },
-    ]
-  },
-  {
-    title: 'Product',
-    items: [
-      { label: 'District Twin', href: '#features' },
-      { label: 'AI Copilot', href: '#features' },
-      { label: 'Mobile App', href: '#home' },
-      { label: 'Pricing Plan', href: '#pricing' },
+      { label: 'Solution', href: '#solution' },
+      { label: 'Architecture', href: '#architecture' },
+      { label: 'Join Waitlist', href: '#waitlist' },
     ]
   },
   {
     title: 'Company',
     items: [
-      { label: 'About Us', href: '#about' },
-      { label: 'Case Studies', href: '#about' },
-      { label: 'Security & Trust', href: '#features' },
-      { label: 'Contact Support', href: '#contact' },
+      { label: 'Our Team', href: '#team' },
+      { label: 'Contact Support', href: '#waitlist' },
+    ]
+  },
+  {
+    title: 'Legal',
+    items: [
+      { label: 'Privacy Policy', href: '#' },
+      { label: 'Terms of Service', href: '#' },
+      { label: 'Security Audits', href: '#' },
     ]
   }
 ];

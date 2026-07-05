@@ -20,7 +20,7 @@ export default function TechLayer() {
   ];
 
   return (
-    <section className="py-24 relative overflow-hidden bg-dot-pattern">
+    <section id="architecture" className="py-24 relative overflow-hidden bg-dot-pattern">
       {/* Glow Blobs */}
       <div className="absolute top-[30%] left-[10%] w-[380px] h-[380px] rounded-full bg-primary/3 blur-[100px] pointer-events-none" />
       <div className="absolute bottom-[20%] right-[10%] w-[380px] h-[380px] rounded-full bg-secondary/3 blur-[100px] pointer-events-none" />
@@ -83,7 +83,7 @@ export default function TechLayer() {
                     >
                       {/* Circle indicator */}
                       <div className={`absolute -left-[33px] top-1.5 w-4 h-4 rounded-full border-2 transition-all duration-300 ${
-                        isActive ? 'bg-primary border-primary scale-125 shadow-[0_0_8px_#4F7CFF]' : 'bg-white border-primary/45'
+                        isActive ? 'bg-primary border-primary scale-125 shadow-[0_0_8px_#0D9488]' : 'bg-white border-primary/45'
                       }`} />
 
                       <h4 className="text-sm font-extrabold text-txt-main group-hover:text-primary transition-colors">

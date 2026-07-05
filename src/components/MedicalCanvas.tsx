@@ -32,11 +32,11 @@ export default function MedicalCanvas() {
 
   // Set of fixed coordinates so they don't shift during SSR hydration
   const items: FloatingItem[] = [
-    { id: 1, type: 'cross', color: '#4F7CFF', size: 36, x: 12, y: 15, speed: 15, direction: 'normal' },
+    { id: 1, type: 'cross', color: '#0D9488', size: 36, x: 12, y: 15, speed: 15, direction: 'normal' },
     { id: 2, type: 'pill', color: '#7B61FF', size: 40, x: 82, y: 22, speed: 20, direction: 'reverse' },
     { id: 3, type: 'heartbeat', color: '#22C55E', size: 48, x: 8, y: 55, speed: 25, direction: 'slow' },
     { id: 4, type: 'circle', color: '#67E8F9', size: 28, x: 88, y: 68, speed: 12, direction: 'normal' },
-    { id: 5, type: 'shield', color: '#4F7CFF', size: 44, x: 22, y: 82, speed: 18, direction: 'reverse' },
+    { id: 5, type: 'shield', color: '#0D9488', size: 44, x: 22, y: 82, speed: 18, direction: 'reverse' },
     { id: 6, type: 'cross', color: '#22C55E', size: 24, x: 74, y: 88, speed: 15, direction: 'slow' },
     { id: 7, type: 'pill', color: '#FF708B', size: 32, x: 48, y: 8, speed: 22, direction: 'normal' },
   ];
