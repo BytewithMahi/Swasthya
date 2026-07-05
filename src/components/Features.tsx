@@ -75,7 +75,7 @@ export default function Features() {
   };
 
   return (
-    <section id="features" className="py-24 relative overflow-hidden bg-dot-pattern">
+    <section id="solution" className="py-24 relative overflow-hidden bg-dot-pattern">
       {/* Soft Background Blur Blobs */}
       <div className="absolute right-[5%] top-[10%] w-[350px] h-[350px] rounded-full bg-secondary/3 blur-[90px] pointer-events-none" />
       <div className="absolute left-[5%] bottom-[10%] w-[350px] h-[350px] rounded-full bg-accent/3 blur-[90px] pointer-events-none" />
@@ -85,7 +85,7 @@ export default function Features() {
         {/* Section Header */}
         <div className="max-w-3xl mx-auto text-center mb-20">
           <span className="px-3.5 py-1.5 rounded-full bg-primary/10 text-primary font-bold text-xs tracking-wider uppercase mb-4 inline-block">
-            Comprehensive Suite
+            Solution to the Problem
           </span>
           <h2 className="text-4xl md:text-5xl font-extrabold text-txt-main tracking-tight leading-tight mt-2 mb-6">
             Empowering Health Systems with Artificial Intelligence

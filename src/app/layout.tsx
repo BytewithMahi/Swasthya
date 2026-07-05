@@ -1,11 +1,17 @@
 import type { Metadata } from "next";
-import { Outfit } from "next/font/google";
+import { Outfit, Dancing_Script } from "next/font/google";
 import "./globals.css";
 
 const outfit = Outfit({
   variable: "--font-outfit",
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700", "800", "900"],
+});
+
+const dancingScript = Dancing_Script({
+  variable: "--font-cursive",
+  subsets: ["latin"],
+  weight: ["400", "700"],
 });
 
 export const metadata: Metadata = {
@@ -22,7 +28,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${outfit.variable} h-full scroll-smooth antialiased`}
+      className={`${outfit.variable} ${dancingScript.variable} h-full scroll-smooth antialiased`}
     >
       <body className="min-h-full flex flex-col bg-bg-base text-txt-main">
         {children}

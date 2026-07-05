@@ -1,16 +1,11 @@
 'use client';
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
-import TrustedBy from '@/components/TrustedBy';
 import Features from '@/components/Features';
-import DashboardPreview from '@/components/DashboardPreview';
 import TechLayer from '@/components/TechLayer';
-import DistrictTwin from '@/components/DistrictTwin';
-import Copilot from '@/components/Copilot';
-import Stats from '@/components/Stats';
-import Testimonials from '@/components/Testimonials';
+import Team from '@/components/Team';
 import Waitlist from '@/components/Waitlist';
 import Footer from '@/components/Footer';
 import LenisProvider from '@/components/LenisProvider';
@@ -18,7 +13,96 @@ import CursorFollower from '@/components/CursorFollower';
 import MedicalCanvas from '@/components/MedicalCanvas';
 import Preloader from '@/components/Preloader';
 
+const sectionColors: { [key: string]: string } = {
+  home: '#FAF9F6',          // Warm Alabaster Off-white
+  solution: '#93C5FD',      // Vibrant digital blue
+  architecture: '#C7D2FE',  // Rich indigo purple
+  team: '#A7F3D0',          // Glowing emerald mint
+  waitlist: '#FCA5A5',      // Bright popping rose/red
+};
+
 export default function Home() {
+  const [bgColor, setBgColor] = useState('#F8FAFF');
+  const [isMaintenance, setIsMaintenance] = useState<boolean | null>(null);
+
+  useEffect(() => {
+    async function checkMaintenance() {
+      try {
+        const res = await fetch('/api/settings');
+        const data = await res.json();
+        if (res.ok && data.success && data.settings) {
+          setIsMaintenance(data.settings.maintenance_mode === 'true');
+        } else {
+          setIsMaintenance(false);
+        }
+      } catch (err) {
+        setIsMaintenance(false);
+      }
+    }
+    checkMaintenance();
+  }, []);
+
+  useEffect(() => {
+    if (isMaintenance) return;
+    const observerOptions = {
+      root: null,
+      rootMargin: '-30% 0px -40% 0px',
+      threshold: 0,
+    };
+
+    const observerCallback = (entries: IntersectionObserverEntry[]) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const id = entry.target.id;
+          if (sectionColors[id]) {
+            setBgColor(sectionColors[id]);
+          }
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+    const sectionIds = ['home', 'solution', 'architecture', 'team', 'waitlist'];
+    sectionIds.forEach((id) => {
+      const el = document.getElementById(id);
+      if (el) observer.observe(el);
+    });
+
+    return () => observer.disconnect();
+  }, [isMaintenance]);
+
+  if (isMaintenance === null) {
+    return <Preloader />;
+  }
+
+  if (isMaintenance) {
+    return (
+      <div className="min-h-screen bg-[#FAF9F6] text-txt-main font-sans flex flex-col items-center justify-center p-6 relative overflow-hidden">
+        {/* Background glowing ambient elements */}
+        <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-primary/10 rounded-full blur-[120px] pointer-events-none" />
+        <div className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-secondary/5 rounded-full blur-[120px] pointer-events-none" />
+
+        <div className="text-center z-10 max-w-md clay-card p-10 border border-white bg-white/80 backdrop-blur-md shadow-2xl flex flex-col items-center">
+          {/* Logo / Badge */}
+          <div className="w-16 h-16 rounded-2xl bg-primary/10 text-primary flex items-center justify-center mb-6 animate-pulse">
+            <span className="text-2xl font-black">S</span>
+          </div>
+
+          <h1 className="text-2xl md:text-3xl font-black text-txt-main tracking-tight uppercase mb-4 leading-tight">
+            We are going through a change
+          </h1>
+          <p className="text-sm text-txt-muted leading-relaxed mb-6">
+            Swasthya is undergoing critical intelligence node updates. We will be back online shortly to continue powering healthcare optimization.
+          </p>
+          <div className="h-1.5 w-32 bg-slate-100 rounded-full overflow-hidden">
+            <div className="h-full bg-primary rounded-full animate-pulse" style={{ width: '60%' }} />
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <LenisProvider>
       {/* Fullscreen medicine spinning preloader */}
@@ -34,36 +118,24 @@ export default function Home() {
       <Navbar />
 
       {/* Landing Page Content Blocks */}
-      <main className="flex-1 flex flex-col relative z-10">
+      <main 
+        className="flex-1 flex flex-col relative z-10 transition-colors duration-1000 ease-in-out"
+        style={{ backgroundColor: bgColor }}
+      >
         
         {/* Section 1: Hero Area */}
         <Hero />
 
-        {/* Section 2: Trusted By Scrolling Bar */}
-        <TrustedBy />
-
-        {/* Section 3: Core Features Grid */}
+        {/* Section 2: Solution to the Problem */}
         <Features />
 
-        {/* Section 4: Zooming Dashboard Preview */}
-        <DashboardPreview />
-
-        {/* Section 5: AI + Blockchain Ledger Integrity Diagram */}
+        {/* Section 3: Architecture of the Solution */}
         <TechLayer />
 
-        {/* Section 6: Interactive District Command Twin Topology */}
-        <DistrictTwin />
+        {/* Section 4: Team */}
+        <Team />
 
-        {/* Section 7: Swasthya AI Assistant Mockup Chat Client */}
-        <Copilot />
-
-        {/* Section 8: Health Platform Statistics Counters */}
-        <Stats />
-
-        {/* Section 9: Customer/Doctor Marquee Testimonials */}
-        <Testimonials />
-
-        {/* Section 10: Subscriber Request Waitlist Zone */}
+        {/* Section 5: Waitlist */}
         <Waitlist />
 
       </main>

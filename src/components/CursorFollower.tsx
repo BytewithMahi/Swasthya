@@ -67,8 +67,8 @@ export default function CursorFollower() {
           x: cursorXSpring,
           y: cursorYSpring,
           scale: isHovered ? (hoverType === 'click' ? 1.6 : 2.0) : 1,
-          backgroundColor: isHovered && hoverType === 'click' ? 'rgba(79, 124, 255, 0.08)' : 'rgba(79, 124, 255, 0)',
-          borderColor: isHovered ? (hoverType === 'click' ? '#7B61FF' : '#4F7CFF') : 'rgba(79, 124, 255, 0.45)',
+          backgroundColor: isHovered && hoverType === 'click' ? 'rgba(13, 148, 136, 0.08)' : 'rgba(13, 148, 136, 0)',
+          borderColor: isHovered ? (hoverType === 'click' ? '#7B61FF' : '#0D9488') : 'rgba(13, 148, 136, 0.45)',
         }}
       >
         {isHovered && hoverType === 'view' && (

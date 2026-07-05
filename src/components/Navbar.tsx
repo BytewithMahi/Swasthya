@@ -6,11 +6,10 @@ import { HeartPulse, Menu, X, Download } from 'lucide-react';
 
 const navItems = [
   { label: 'Home', href: '#home' },
-  { label: 'Features', href: '#features' },
-  { label: 'Dashboard', href: '#dashboard-preview' },
-  { label: 'About Us', href: '#about' },
-  { label: 'Pricing', href: '#pricing' },
-  { label: 'Contact', href: '#contact' },
+  { label: 'Solution', href: '#solution' },
+  { label: 'Architecture', href: '#architecture' },
+  { label: 'Team', href: '#team' },
+  { label: 'Waitlist', href: '#waitlist' },
 ];
 
 export default function Navbar() {
@@ -21,26 +20,37 @@ export default function Navbar() {
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
-
-      // Simple active section finder based on scroll position
-      const sections = navItems.map(item => item.href.substring(1));
-      let currentSection = 'home';
-      
-      for (const section of sections) {
-        const el = document.getElementById(section);
-        if (el) {
-          const rect = el.getBoundingClientRect();
-          if (rect.top <= 120 && rect.bottom >= 120) {
-            currentSection = section;
-            break;
-          }
-        }
-      }
-      setActiveSection(currentSection);
     };
 
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    handleScroll(); // Initialize on mount
+
+    const observerOptions = {
+      root: null,
+      rootMargin: '-30% 0px -40% 0px',
+      threshold: 0,
+    };
+
+    const observerCallback = (entries: IntersectionObserverEntry[]) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setActiveSection(entry.target.id);
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+    navItems.forEach((item) => {
+      const id = item.href.substring(1);
+      const el = document.getElementById(id);
+      if (el) observer.observe(el);
+    });
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      observer.disconnect();
+    };
   }, []);
 
   const scrollToSection = (id: string) => {
