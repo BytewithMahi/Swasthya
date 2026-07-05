@@ -16,7 +16,7 @@ const teamMembers = [
     glowColor: 'bg-primary/6',
     badgeColor: 'bg-primary/10 text-primary',
     borderHover: 'hover:border-primary/30',
-    socials: { github: '#', linkedin: '#', twitter: '#' },
+    socials: { github: 'https://github.com/ruyamB', linkedin: 'https://www.linkedin.com/in/ruyam-bhattacharya?utm_source=share_via&utm_content=profile&utm_medium=member_android', twitter: 'https://x.com/Ruyambhatt18542' },
   },
   {
     name: 'Arijit Chakraborty',
@@ -29,7 +29,7 @@ const teamMembers = [
     glowColor: 'bg-secondary/6',
     badgeColor: 'bg-secondary/10 text-secondary',
     borderHover: 'hover:border-secondary/30',
-    socials: { github: '#', linkedin: '#', twitter: '#' },
+    socials: { github: 'https://github.com/BytewithMahi', linkedin: 'https://www.linkedin.com/in/arijit-chakraborty-73238738b?utm_source=share_via&utm_content=profile&utm_medium=member_android', twitter: 'https://x.com/25Arijit' },
   },
   {
     name: 'Arkaprabho Chatterjee',
@@ -42,7 +42,7 @@ const teamMembers = [
     glowColor: 'bg-accent/6',
     badgeColor: 'bg-accent/10 text-accent',
     borderHover: 'hover:border-accent/30',
-    socials: { github: '#', linkedin: '#', twitter: '#' },
+    socials: { github: ' https://github.com/Helium-Debug', linkedin: 'https://www.linkedin.com/in/arkaprabho-chatterjee-992095318?utm_source=share_via&utm_content=profile&utm_medium=member_android', twitter: 'https://x.com/____helium_____' },
   },
 ];
 
