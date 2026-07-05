@@ -32,11 +32,11 @@ const teamMembers = [
     socials: { github: '#', linkedin: '#', twitter: '#' },
   },
   {
-    name: 'Arkoprabho Chatterjee',
-    role: 'AI Lead',
+    name: 'Arkaprabho Chatterjee',
+    role: 'AI Lead & Backend',
     initials: 'AC',
     description:
-      'Leads the AI and machine-learning pipeline — outbreak forecasting models, NLP-powered copilot intelligence, and predictive resource allocation algorithms.',
+      'Leads the AI and machine-learning pipeline — outbreak forecasting models, NLP-powered copilot intelligence, and predictive resource allocation algorithms. Also contribute to the backend of the system.',
     icon: BrainCircuit,
     gradient: 'from-accent to-emerald-500',
     glowColor: 'bg-accent/6',
