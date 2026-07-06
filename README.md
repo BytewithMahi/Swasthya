@@ -93,7 +93,7 @@ Dashboard
 Team Naam Bhaba Hoyeni
 
 - Arijit Chakraborty
-- Arkoprobho Chatterjee
+- Arkaprabho Chatterjee
 - Ruyam Bhattacharya
 
 
