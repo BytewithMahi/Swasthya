@@ -71,8 +71,9 @@ Dashboard
 
 ## 📸 Screenshots
 
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/4adf4c2a-d48d-4e7c-bbf5-a59450eb8e81" />
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/cd609304-eae9-46d7-b8c6-fadf88fd20b5" />
+<img width="1904" height="922" alt="image" src="https://github.com/user-attachments/assets/1f576335-bb68-4c5e-81bd-2a4c05d6be32" />
+<img width="1901" height="922" alt="image" src="https://github.com/user-attachments/assets/f38b99d0-42fd-4381-90ec-ce10dff99ee2" />
+
 
 
 
