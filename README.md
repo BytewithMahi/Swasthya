@@ -71,7 +71,10 @@ Dashboard
 
 ## 📸 Screenshots
 
-(Add your UI screenshots here)
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/4adf4c2a-d48d-4e7c-bbf5-a59450eb8e81" />
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/cd609304-eae9-46d7-b8c6-fadf88fd20b5" />
+
+
 
 ---
 
