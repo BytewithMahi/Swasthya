@@ -90,7 +90,7 @@ Dashboard
 
 ## 👥 Team
 
-Team Quantum Quirks
+Team Naam Bhaba Hoyeni
 
 - Arijit Chakraborty
 - Arkoprobho Chatterjee
