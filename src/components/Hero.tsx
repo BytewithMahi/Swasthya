@@ -155,7 +155,7 @@ export default function Hero() {
             style={{ rotateX, rotateY, transformStyle: 'preserve-3d' }}
           >
             {/* Background tablet shape overlay */}
-            <div className="absolute top-[15%] -left-[25%] w-[420px] h-[280px] rounded-[32px] glass-panel border border-white/70 shadow-lg -rotate-6 hidden sm:flex flex-col p-5 overflow-hidden select-none pointer-events-none z-0">
+            <div className="absolute top-[15%] -left-[25%] w-[420px] h-[280px] rounded-[32px] glass-panel border border-white/70 shadow-lg -rotate-6 hidden md:flex flex-col p-5 overflow-hidden select-none pointer-events-none z-0">
               <div className="flex items-center justify-between border-b border-primary/5 pb-3 mb-3">
                 <div className="flex items-center gap-1.5">
                   <div className="w-2.5 h-2.5 rounded-full bg-red-400" />
@@ -268,7 +268,7 @@ export default function Hero() {
               style={{ x: layer1X, y: layer1Y, z: 50 }}
               animate={{ y: [0, -10, 0] }}
               transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut' }}
-              className="absolute -left-[35%] top-[10%] w-[165px] p-4 rounded-2xl clay-card border border-white z-20"
+              className="absolute -left-[35%] top-[10%] w-[165px] p-4 rounded-2xl clay-card border border-white z-20 hidden md:block"
             >
               <div className="flex items-center gap-2 mb-2">
                 <div className="w-7 h-7 rounded-lg bg-accent/15 flex items-center justify-center text-accent">
@@ -285,7 +285,7 @@ export default function Hero() {
               style={{ x: layer2X, y: layer2Y, z: 60 }}
               animate={{ y: [0, 8, 0] }}
               transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut', delay: 0.5 }}
-              className="absolute -right-[35%] top-[30%] w-[175px] p-4 rounded-2xl clay-card border border-white z-20"
+              className="absolute -right-[35%] top-[30%] w-[175px] p-4 rounded-2xl clay-card border border-white z-20 hidden md:block"
             >
               <div className="flex items-center gap-2 mb-1.5">
                 <div className="w-7 h-7 rounded-lg bg-red-500/10 flex items-center justify-center text-red-500">
@@ -302,7 +302,7 @@ export default function Hero() {
               style={{ x: layer1X, y: layer2Y, z: 70 }}
               animate={{ y: [0, -12, 0] }}
               transition={{ duration: 5.5, repeat: Infinity, ease: 'easeInOut', delay: 1 }}
-              className="absolute -left-[30%] bottom-[12%] w-[170px] p-4 rounded-2xl clay-card border border-white z-20"
+              className="absolute -left-[30%] bottom-[12%] w-[170px] p-4 rounded-2xl clay-card border border-white z-20 hidden md:block"
             >
               <div className="flex items-center gap-2 mb-2">
                 <div className="w-7 h-7 rounded-lg bg-secondary/15 flex items-center justify-center text-secondary">
@@ -321,7 +321,7 @@ export default function Hero() {
               style={{ x: layer2X, y: layer1Y, z: 50 }}
               animate={{ y: [0, 10, 0] }}
               transition={{ duration: 7, repeat: Infinity, ease: 'easeInOut', delay: 1.5 }}
-              className="absolute -right-[32%] bottom-[5%] w-[165px] p-4 rounded-2xl clay-card border border-white z-20"
+              className="absolute -right-[32%] bottom-[5%] w-[165px] p-4 rounded-2xl clay-card border border-white z-20 hidden md:block"
             >
               <div className="flex items-center gap-2 mb-1.5">
                 <span className="w-2 h-2 rounded-full bg-accent animate-ping" />
@@ -342,7 +342,7 @@ export default function Hero() {
               }}
               animate={{ y: [0, -18, 0], rotate: [30, 48, 30] }}
               transition={{ duration: 4.8, repeat: Infinity, ease: 'easeInOut', delay: 0.8 }}
-              className="absolute -right-[18%] top-[-8%] w-10 h-20 rounded-full border border-white/60 z-20 overflow-hidden"
+              className="absolute -right-[18%] top-[-8%] w-10 h-20 rounded-full border border-white/60 z-20 overflow-hidden hidden md:block"
             />
 
             {/* FLOATING MEDICINE CAPSULE 2 (Surgical Cyan & White) */}
@@ -356,7 +356,7 @@ export default function Hero() {
               }}
               animate={{ y: [0, 15, 0], rotate: [-45, -28, -45] }}
               transition={{ duration: 5.4, repeat: Infinity, ease: 'easeInOut', delay: 1.2 }}
-              className="absolute -left-[22%] bottom-[22%] w-8 h-16 rounded-full border border-white/60 z-20 overflow-hidden"
+              className="absolute -left-[22%] bottom-[22%] w-8 h-16 rounded-full border border-white/60 z-20 overflow-hidden hidden md:block"
             />
 
           </motion.div>

@@ -194,3 +194,18 @@ body {
 .cursor-hover-scale {
   transition: transform 0.2s ease;
 }
+
+/* Hide default cursor on desktop/fine-pointer devices */
+@media (pointer: fine) {
+  body,
+  a,
+  button,
+  [role="button"],
+  input,
+  select,
+  textarea,
+  .cursor-pointer,
+  [class*="cursor-pointer"] {
+    cursor: none !important;
+  }
+}

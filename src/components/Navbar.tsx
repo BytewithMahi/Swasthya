@@ -28,7 +28,7 @@ export default function Navbar() {
 
     const observerOptions = {
       root: null,
-      rootMargin: '-30% 0px -40% 0px',
+      rootMargin: '-35% 0px -35% 0px',
       threshold: 0,
     };
 

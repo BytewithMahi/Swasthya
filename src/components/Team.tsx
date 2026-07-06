@@ -9,6 +9,7 @@ const teamMembers = [
     name: 'Ruyam Bhattacharjee',
     role: 'System Developer',
     initials: 'RB',
+    image: '/team/ruyam.png',
     description:
       'Architects the core platform infrastructure — backend services, database design, blockchain ledger integrity, and distributed sync engines powering Swasthya.',
     icon: Code2,
@@ -22,6 +23,7 @@ const teamMembers = [
     name: 'Arijit Chakraborty',
     role: 'Frontend & Marketing',
     initials: 'AC',
+    image: '/team/arijit.jpg',
     description:
       'Crafts the pixel-perfect UI/UX, brand identity, and go-to-market strategy — ensuring every interaction with Swasthya is beautiful and impactful.',
     icon: Palette,
@@ -35,6 +37,7 @@ const teamMembers = [
     name: 'Arkaprabho Chatterjee',
     role: 'AI Lead & Backend',
     initials: 'AC',
+    image: '/team/arkoprobho.png',
     description:
       'Leads the AI and machine-learning pipeline — outbreak forecasting models, NLP-powered copilot intelligence, and predictive resource allocation algorithms. Also contribute to the backend of the system.',
     icon: BrainCircuit,
@@ -110,11 +113,19 @@ export default function Team() {
                 {/* Avatar Circle */}
                 <div className="relative mb-6">
                   <div
-                    className={`w-24 h-24 rounded-full bg-gradient-to-br ${member.gradient} flex items-center justify-center text-white shadow-xl group-hover:scale-110 transition-transform duration-500`}
+                    className={`w-24 h-24 rounded-full bg-gradient-to-br ${member.gradient} flex items-center justify-center text-white shadow-xl group-hover:scale-110 transition-transform duration-500 overflow-hidden`}
                   >
-                    <span className="text-2xl font-black tracking-wider select-none">
-                      {member.initials}
-                    </span>
+                    {member.image ? (
+                      <img
+                        src={member.image}
+                        alt={member.name}
+                        className="w-full h-full object-cover select-none"
+                      />
+                    ) : (
+                      <span className="text-2xl font-black tracking-wider select-none">
+                        {member.initials}
+                      </span>
+                    )}
                   </div>
                   {/* Floating icon badge */}
                   <div
